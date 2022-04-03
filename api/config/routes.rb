@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :hello, only:[:index]
+  resources :hello, only: [:index]
 end

@@ -16,5 +16,7 @@ group :development, :test do
 end
 
 group :development do
-  # gem "spring"
+  gem 'rubocop'
+  gem 'rubocop-daemon', require: false # @see https://github.com/fohte/rubocop-daemon
+  gem 'solargraph' # vscode language server
 end
