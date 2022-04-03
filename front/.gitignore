@@ -37,3 +37,4 @@ yarn-error.log*
 *.tsbuildinfo
 
 .pnpm-store
+.pnpm-debug.log
