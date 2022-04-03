@@ -1,6 +1,7 @@
 FROM node:14-alpine
 
-WORKDIR /front
+ENV ROOT="/api"
+WORKDIR ${ROOT}
 
 RUN npm i -g pnpm
 
