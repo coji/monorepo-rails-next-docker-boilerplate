@@ -1,0 +1,23 @@
+version: '3'
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ./api/Dockerfile
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3001 -b '0.0.0.0'"
+    volumes:
+      - ./api:/api
+    ports:
+      - '3001:3001'
+
+  front:
+    build:
+      context: .
+      dockerfile: ./front/Dockerfile
+    command: sh -c "pnpm dev"
+    volumes:
+      - ./front:/front
+    ports:
+      - '3000:3000'
+    depends_on:
+      - api
