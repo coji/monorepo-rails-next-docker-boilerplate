@@ -31,6 +31,6 @@
     "castwide.solargraph",
     "misogi.ruby-rubocop"
   ],
-  "runServices": ["api", "db"],
+  "runServices": ["api"],
   "postCreateCommand": "bundle exec yard gems && rubocop-daemon start" // gem の中身まで solargraph で補完
 }

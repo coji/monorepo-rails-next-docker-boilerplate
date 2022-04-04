@@ -14,7 +14,7 @@ services:
     build:
       context: .
       dockerfile: ./front/Dockerfile
-    command: sh -c "pnpm dev"
+    command: sh -c "pnpm i && pnpm dev"
     volumes:
       - ./front:/front
     ports:
